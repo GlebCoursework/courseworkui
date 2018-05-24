@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/coursework.DataContracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/coursework.DataContracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="User">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Balance" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Login" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="ArrayOfBaseParts">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BaseParts" nillable="true" type="tns:BaseParts" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBaseParts" nillable="true" type="tns:ArrayOfBaseParts" />
+  <xs:complexType name="BaseParts">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cars" nillable="true" type="tns:ArrayOfCar" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Producer" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BaseParts" nillable="true" type="tns:BaseParts" />
+  <xs:complexType name="ArrayOfCar">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Car" nillable="true" type="tns:Car" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCar" nillable="true" type="tns:ArrayOfCar" />
+  <xs:complexType name="Car">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Engine" nillable="true" type="tns:Engine" />
+      <xs:element minOccurs="0" name="Exterior" nillable="true" type="tns:Exterior" />
+      <xs:element minOccurs="0" name="Gearbox" nillable="true" type="tns:Gearbox" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Interior" nillable="true" type="tns:Interior" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Car" nillable="true" type="tns:Car" />
+  <xs:complexType name="Engine">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseParts">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Cylinders" type="xs:int" />
+          <xs:element minOccurs="0" name="HP" type="xs:int" />
+          <xs:element minOccurs="0" name="Liters" type="xs:double" />
+          <xs:element minOccurs="0" name="Torque" type="xs:int" />
+          <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Engine" nillable="true" type="tns:Engine" />
+  <xs:complexType name="Gearbox">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseParts">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+          <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Gearbox" nillable="true" type="tns:Gearbox" />
+  <xs:complexType name="Interior">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseParts">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Colour" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Material" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Interior" nillable="true" type="tns:Interior" />
+  <xs:complexType name="Exterior">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BaseParts">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Colour" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TypeOfPaint" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Exterior" nillable="true" type="tns:Exterior" />
+</xs:schema>

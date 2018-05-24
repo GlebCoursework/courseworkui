@@ -1,0 +1,280 @@
+﻿<Controls:MetroWindow x:Class="courseworkui.DealerWindow"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:courseworkui"
+        mc:Ignorable="d"
+        Title="DealerWindow" Height="760" Width="1360" Loaded="Window_Loaded">
+    <Grid>
+        <TabControl FontSize="15">
+            <TabItem  Header="Car">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="Images/car.jpg" Stretch="UniformToFill"/>
+
+                    </Grid.Background>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBox Grid.ColumnSpan="2" x:Name="CarName" Grid.Row="0" Text="Name:" VerticalContentAlignment="Center" Background="Transparent" Foreground="White"></TextBox>
+                        <TextBox Grid.ColumnSpan="2" x:Name="CarPrice" Grid.Row="1" Text="Price:" VerticalContentAlignment="Center" Background="Transparent" Foreground="White"></TextBox>
+                        <ComboBox Grid.Row="2" x:Name="CarEngine" VerticalContentAlignment="Center" Grid.ColumnSpan="2" Background="Transparent" Foreground="White"></ComboBox>
+                        <ComboBox Grid.Row="3" x:Name="CarGearbox" VerticalContentAlignment="Center" Grid.ColumnSpan="2" Background="Transparent" Foreground="White"></ComboBox>
+                        <ComboBox Grid.Row="4" x:Name="CarInterior" VerticalContentAlignment="Center" Grid.ColumnSpan="2" Background="Transparent" Foreground="White"></ComboBox>
+                        <ComboBox Grid.Row="5" x:Name="CarExterior" VerticalContentAlignment="Center" Grid.ColumnSpan="2" Background="Transparent" Foreground="White"></ComboBox>
+                        <Button Grid.Row="6" Margin="15" Content="Add" Click="AddCar" Background="Transparent" Foreground="White"></Button>
+                        <Button Grid.Row="7" Grid.ColumnSpan="2" Margin="15" Content="Refresh" Click="Refresh" Background="Transparent" Foreground="White"></Button>
+                        <Button Grid.Row="6" Grid.Column="1" Margin="15" Content="Sell" Click="Button_Click" Background="Transparent" Foreground="White"></Button>
+                        <Button Grid.Row="8" Grid.Column="0" Margin="15" Content="Begin Modify" Click="BeginModifyCar" Background="Transparent" Foreground="White"></Button>
+                        <Button Grid.Row="8" Grid.Column="1" Margin="15" Content="End Modify" Click="EndModifyCar" Background="Transparent" Foreground="White"></Button>
+                       
+                    </Grid>
+                    <DataGrid Grid.Column="1" x:Name="datagridcar" AutoGenerateColumns="False" IsReadOnly="True" Background="Transparent" Foreground="White" RowBackground="Transparent">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Name" Binding="{Binding Name}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Price" Binding="{Binding Price}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Status" Binding="{Binding Status}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Engine" Binding="{Binding Engine}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Gearbox" Binding="{Binding Gearbox}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Interior" Binding="{Binding Interior}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Exterior" Binding="{Binding Exterior}"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                        
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem Header=" Engine">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="Images/engine.jpg" Stretch="UniformToFill"/>
+
+                    </Grid.Background>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBox Grid.ColumnSpan="2" x:Name="EngineName" Text="Name" VerticalContentAlignment="Center" Background="Transparent" Foreground="White"></TextBox>
+                        <TextBox Grid.Row="1" Grid.ColumnSpan="2" x:Name="EnginePrice" Text="Price:" VerticalContentAlignment="Center" Background="Transparent" Foreground="White"></TextBox>
+                        <TextBox Grid.Row="2" Grid.ColumnSpan="2" x:Name="EngineProducer" Text="Producer:" VerticalContentAlignment="Center" Background="Transparent" Foreground="White"></TextBox>
+                        <TextBox Grid.Row="3" Grid.ColumnSpan="2" x:Name="EngineCylinders" Text="Cylinders:" VerticalContentAlignment="Center" Background="Transparent" Foreground="White"></TextBox>
+                        <TextBox Grid.Row="4" Grid.ColumnSpan="2" x:Name="EngineHP" Text="Hp:" VerticalContentAlignment="Center" Background="Transparent" Foreground="White"></TextBox>
+                        <TextBox Grid.Row="5" Grid.ColumnSpan="2" x:Name="EngineTorque" Text="Torque:" VerticalContentAlignment="Center" Background="Transparent" Foreground="White"></TextBox>
+                        <TextBox Grid.Row="6" Grid.ColumnSpan="2" x:Name="EngineType" Text="Type:" VerticalContentAlignment="Center" Background="Transparent" Foreground="White"></TextBox>
+                        <TextBox Grid.Row="7" Grid.ColumnSpan="2" x:Name="EngineLiters" Text="Liters:" VerticalContentAlignment="Center" Background="Transparent" Foreground="White"></TextBox>
+                        <Button Grid.Row="8" Grid.ColumnSpan="2" Margin="15" Content="Add" Click="AddEngine" Background="Transparent" Foreground="White"></Button>
+                        <Button Grid.Row="9" Grid.ColumnSpan="2" Margin="15" Content="Refresh" Click="RefreshEngine" Background="Transparent" Foreground="White"></Button>
+                        <Button Grid.Row="10" Grid.Column="0" Margin="15" Content="Begin Modify" Click="BeginModifyEngine" Background="Transparent" Foreground="White"></Button>
+                        <Button Grid.Row="10" Grid.Column="1" Margin="15" Content="End Modify" Click="EndModifyEngine" Background="Transparent" Foreground="White"></Button>
+                    </Grid>
+                    <DataGrid Grid.Column="1" x:Name="datagridengine" AutoGenerateColumns="False" IsReadOnly="True" Background="Transparent" Foreground="White" RowBackground="Transparent">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Name" Binding="{Binding Name}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Price" Binding="{Binding Price}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Producer" Binding="{Binding Producer}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Cylinders" Binding="{Binding Cylinders}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="HP" Binding="{Binding HP}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Torque" Binding="{Binding Torque}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Type" Binding="{Binding Type}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Liters" Binding="{Binding Liters}"></DataGridTextColumn>
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem Header=" Gearbox">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="Images/gearbox.jpg" Stretch="UniformToFill"/>
+
+                    </Grid.Background>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBox Grid.Row="0" x:Name="GearboxName" Text="Name" VerticalContentAlignment="Center" Background="Transparent" Foreground="White"></TextBox>
+                        <TextBox Grid.Row="1"  x:Name="GearboxPrice" Text="Price:" VerticalContentAlignment="Center" Background="Transparent" Foreground="White"></TextBox>
+                        <TextBox Grid.Row="2"  x:Name="GearboxProducer" Text="Producer:" VerticalContentAlignment="Center" Background="Transparent" Foreground="White"></TextBox>
+                        <TextBox Grid.Row="3"  x:Name="GearboxGears" Text="Gears:" VerticalContentAlignment="Center" Background="Transparent" Foreground="White"></TextBox>
+                        <TextBox Grid.Row="4"  x:Name="GearboxType" Text="Type:" VerticalContentAlignment="Center" Background="Transparent" Foreground="White"></TextBox>
+                        <Button Grid.Row="5" Margin="15" Content="Add" Click="AddGearbox" Background="Transparent" Foreground="White"></Button>
+                        <Button Grid.Row="6" Margin="15" Content="Refresh" Click="RefreshGearbox" Background="Transparent" Foreground="White"></Button>
+                        <Button Grid.Row="7" Margin="15" Content="Begin Modify" Click="BeginModifyGearbox" Background="Transparent" Foreground="White"></Button>
+                        <Button Grid.Row="8" Margin="15" Content="End Modify" Click="EndModifyGearbox" Background="Transparent" Foreground="White"></Button>
+                    </Grid>
+                    <DataGrid Grid.Column="1"  x:Name="datagridgearbox" AutoGenerateColumns="False" IsReadOnly="True" Background="Transparent" Foreground="White" RowBackground="Transparent">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Name" Binding="{Binding Name}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Price" Binding="{Binding Price}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Producer" Binding="{Binding Producer}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Gears" Binding="{Binding Quantity}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Type" Binding="{Binding Type}"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem Header=" Interior" >
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="Images/interior.jpg" Stretch="UniformToFill"/>
+
+                    </Grid.Background>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBox Grid.Row="0"  x:Name="InteriorPrice" Text="Price:" VerticalContentAlignment="Center" Background="Transparent" Foreground="White"></TextBox>
+                        <TextBox Grid.Row="1"  x:Name="InteriorProducer" Text="Producer:" VerticalContentAlignment="Center"  Background="Transparent" Foreground="White"></TextBox>
+                        <TextBox Grid.Row="2"  x:Name="InteriorColour" Text="Colour:" VerticalContentAlignment="Center"  Background="Transparent" Foreground="White"></TextBox>
+                        <TextBox Grid.Row="3"  x:Name="InteriorMaterial" Text="Material:" VerticalContentAlignment="Center"  Background="Transparent" Foreground="White"></TextBox>
+                        <Button Grid.Row="4" Margin="15" Content="Add" Click="AddInterior"  Background="Transparent" Foreground="White"></Button>
+                        <Button Grid.Row="5" Margin="15" Content="Refresh" Click="RefreshInterior"  Background="Transparent" Foreground="White"></Button>
+                        <Button Grid.Row="6" Margin="15" Content="Begin Modify" Click="BeginModifyInterior" Background="Transparent" Foreground="White"></Button>
+                        <Button Grid.Row="7" Margin="15" Content="End Modify" Click="EndModifyInterior" Background="Transparent" Foreground="White"></Button>
+                    </Grid>
+                    <DataGrid Grid.Column="1"  x:Name="datagridinterior" AutoGenerateColumns="False" IsReadOnly="True"  Background="Transparent" Foreground="White" RowBackground="Transparent">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Price" Binding="{Binding Price}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Producer" Binding="{Binding Producer}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Colour" Binding="{Binding Colour}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Material" Binding="{Binding Material}"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem Header=" Exterior">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="Images/exterior.jpg" Stretch="UniformToFill"/>
+
+                    </Grid.Background>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                 
+                        <TextBox Grid.Row="0"  x:Name="ExteriorPrice" Text="Price:" VerticalContentAlignment="Center" Background="Transparent" Foreground="White"></TextBox>
+                        <TextBox Grid.Row="1"  x:Name="ExteriorProducer" Text="Producer:" VerticalContentAlignment="Center" Background="Transparent" Foreground="White"></TextBox>
+                        <TextBox Grid.Row="2"  x:Name="ExteriorColour" Text="Colour:" VerticalContentAlignment="Center" Background="Transparent" Foreground="White"></TextBox>
+                        <TextBox Grid.Row="3"  x:Name="ExteriorTypeOfPaint" Text="TypeOfPaint:" VerticalContentAlignment="Center" Background="Transparent" Foreground="White"></TextBox>
+                        <Button Grid.Row="4" Margin="15" Content="Add" Click="AddExterior" Background="Transparent" Foreground="White"></Button>
+                        <Button Grid.Row="5" Margin="15" Content="Refresh" Click="RefreshExterior" Background="Transparent" Foreground="White"></Button>
+                        <Button Grid.Row="6" Margin="15" Content="Begin Modify" Click="BeginModifyExterior" Background="Transparent" Foreground="White"></Button>
+                        <Button Grid.Row="7" Margin="15" Content="End Modify" Click="EndModifyExterior" Background="Transparent" Foreground="White"></Button>
+                    </Grid>
+                    <DataGrid Grid.Column="1"  x:Name="datagridexterior" AutoGenerateColumns="False" IsReadOnly="True" Background="Transparent" Foreground="White" RowBackground="Transparent">
+                        <DataGrid.Columns>
+                          
+                            <DataGridTextColumn Header="Price" Binding="{Binding Price}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Producer" Binding="{Binding Producer}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Colour" Binding="{Binding Colour}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Material" Binding="{Binding TypeOfPaint}"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem Header=" User">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="Images/user.jpg" Stretch="UniformToFill" />
+
+                    </Grid.Background>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBox Grid.Row="0" x:Name="UserLogin" Text="Login:" VerticalContentAlignment="Center" Background="Transparent" Foreground="White"></TextBox>
+                        <TextBox Grid.Row="1"  x:Name="UserPassword" Text="Password:" VerticalContentAlignment="Center" Background="Transparent" Foreground="White"></TextBox>
+                        <TextBox Grid.Row="2"  x:Name="UserBalance" Text="Balance:" VerticalContentAlignment="Center" Background="Transparent" Foreground="White"></TextBox>
+                        <Button Grid.Row="3" Margin="15" Content="Modify" Click="ModifyUser" Background="Transparent" Foreground="White"></Button>
+                    </Grid>
+                    <TextBlock Grid.Column="1" x:Name="usertextblock" FontSize="18" Background="Transparent" Foreground="White">
+                        
+                    </TextBlock>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Controls:MetroWindow>

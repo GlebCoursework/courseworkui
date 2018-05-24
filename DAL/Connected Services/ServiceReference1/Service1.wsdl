@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:56076/Methods.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:56076/Methods.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:56076/Methods.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/coursework.DataContracts" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMethods_ValidateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateUser" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_ValidateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_ModifyUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyUser" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_ModifyUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_GetBaseParts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBaseParts" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_GetBaseParts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBasePartsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_AddParts_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddParts" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_AddParts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPartsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_AddUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUser" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_AddUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_ModifyParts_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyParts" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_ModifyParts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyPartsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_AddCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCar" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_AddCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_GetCars_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCars" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_GetCars_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCarsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_SellCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:SellCar" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_SellCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SellCarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_GetUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUser" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_GetUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_ModifyCar_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyCar" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_ModifyCar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyCarResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMethods">
+    <wsdl:operation name="ValidateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMethods/ValidateUser" message="tns:IMethods_ValidateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMethods/ValidateUserResponse" message="tns:IMethods_ValidateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMethods/ModifyUser" message="tns:IMethods_ModifyUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMethods/ModifyUserResponse" message="tns:IMethods_ModifyUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBaseParts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMethods/GetBaseParts" message="tns:IMethods_GetBaseParts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMethods/GetBasePartsResponse" message="tns:IMethods_GetBaseParts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddParts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMethods/AddParts" message="tns:IMethods_AddParts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMethods/AddPartsResponse" message="tns:IMethods_AddParts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMethods/AddUser" message="tns:IMethods_AddUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMethods/AddUserResponse" message="tns:IMethods_AddUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyParts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMethods/ModifyParts" message="tns:IMethods_ModifyParts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMethods/ModifyPartsResponse" message="tns:IMethods_ModifyParts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMethods/AddCar" message="tns:IMethods_AddCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMethods/AddCarResponse" message="tns:IMethods_AddCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCars">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMethods/GetCars" message="tns:IMethods_GetCars_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMethods/GetCarsResponse" message="tns:IMethods_GetCars_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SellCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMethods/SellCar" message="tns:IMethods_SellCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMethods/SellCarResponse" message="tns:IMethods_SellCar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMethods/GetUser" message="tns:IMethods_GetUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMethods/GetUserResponse" message="tns:IMethods_GetUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyCar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMethods/ModifyCar" message="tns:IMethods_ModifyCar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMethods/ModifyCarResponse" message="tns:IMethods_ModifyCar_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMethods" type="tns:IMethods">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ValidateUser">
+      <soap:operation soapAction="http://tempuri.org/IMethods/ValidateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyUser">
+      <soap:operation soapAction="http://tempuri.org/IMethods/ModifyUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBaseParts">
+      <soap:operation soapAction="http://tempuri.org/IMethods/GetBaseParts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddParts">
+      <soap:operation soapAction="http://tempuri.org/IMethods/AddParts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="http://tempuri.org/IMethods/AddUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyParts">
+      <soap:operation soapAction="http://tempuri.org/IMethods/ModifyParts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCar">
+      <soap:operation soapAction="http://tempuri.org/IMethods/AddCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCars">
+      <soap:operation soapAction="http://tempuri.org/IMethods/GetCars" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SellCar">
+      <soap:operation soapAction="http://tempuri.org/IMethods/SellCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <soap:operation soapAction="http://tempuri.org/IMethods/GetUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyCar">
+      <soap:operation soapAction="http://tempuri.org/IMethods/ModifyCar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IMethods" binding="tns:BasicHttpBinding_IMethods">
+      <soap:address location="http://localhost:56076/Methods.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

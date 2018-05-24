@@ -1,0 +1,30 @@
+﻿<Window x:Class="courseworkui.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:courseworkui"
+        mc:Ignorable="d"
+        Title="RegisterWindow" Height="300" Width="300">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="textbox1" Grid.Row="0" Grid.ColumnSpan="3" Margin="20" Text="Login:"></TextBox>
+            <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="textbox2" Grid.Row="1" Grid.ColumnSpan="3" Margin="20" Text="Balance:"></TextBox>
+            <PasswordBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="passwordbox1" Grid.Row="2" Grid.ColumnSpan="3" Margin="20"></PasswordBox>
+            <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Margin="15" Content="Register" Click="Register"></Button>
+
+
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,31 @@
+﻿<Window x:Class="courseworkui.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:courseworkui"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="300">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/login.jpg" Stretch="UniformToFill"/>
+
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="textbox1" Grid.Row="0" Grid.ColumnSpan="3" Margin="20" Background="Transparent" Foreground="White"></TextBox>
+        <PasswordBox VerticalContentAlignment="Center" HorizontalContentAlignment="Center" x:Name="passwordbox1" Grid.Row="1" Grid.ColumnSpan="3" Margin="20" Background="Transparent" Foreground="White"></PasswordBox>
+        <Button Grid.Row="3" Grid.Column="0" Margin="15" Content="Enter" Click="Button_Click" Background="Transparent"  Foreground="White"></Button>
+        <Button Grid.Row="3" Grid.Column="2" Margin="15" Content="Register" Click="Register" Background="Transparent" Foreground="White"></Button>
+    </Grid>
+</Window>

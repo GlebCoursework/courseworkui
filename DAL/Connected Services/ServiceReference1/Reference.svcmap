@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="26427ac1-512f-427f-b9c8-78076fd220a3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:56076/Methods.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Methods.xsd" MetadataType="Schema" ID="94741a99-80b7-4f8a-8d7c-325798994a5a" SourceId="1" SourceUrl="http://localhost:56076/Methods.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="31d9a44e-40aa-45a2-b4ef-9c0788974e75" SourceId="1" SourceUrl="http://localhost:56076/Methods.svc?wsdl" />
+    <MetadataFile FileName="Methods1.xsd" MetadataType="Schema" ID="e6334077-f196-4005-ade5-86c4e41fa358" SourceId="1" SourceUrl="http://localhost:56076/Methods.svc?xsd=xsd2" />
+    <MetadataFile FileName="Methods2.xsd" MetadataType="Schema" ID="5a9c5b80-ae07-4fcb-9d41-2e9ea84c1c6f" SourceId="1" SourceUrl="http://localhost:56076/Methods.svc?xsd=xsd1" />
+    <MetadataFile FileName="Methods.disco" MetadataType="Disco" ID="6634c1ed-fa70-4fb1-ab2d-8a6e881c2267" SourceId="1" SourceUrl="http://localhost:56076/Methods.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
