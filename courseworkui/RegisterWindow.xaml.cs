@@ -29,14 +29,14 @@ namespace courseworkui
             InitializeComponent();
         }
 
-        private void Register(object sender, RoutedEventArgs e)
+        private void Register(object sender, RoutedEventArgs e) //вікно реєстрації
         {
             //RegisterWindow registerWindow = new RegisterWindow();
             //registerWindow.ShowDialog();
             string login = textbox1.Text;
             decimal.TryParse(textbox2.Text, out decimal balance);
             string password = passwordbox1.Password;
-            UserUI userUI = new UserUI() { Login = login, Password = password, Balance = balance };
+            UserUI userUI = new UserUI() { Login = login, Password = password, Balance = balance }; //створення нового юзера
             Methods.AddUser(userUI);
             this.Close();
         }

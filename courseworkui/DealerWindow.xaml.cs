@@ -20,7 +20,7 @@ namespace courseworkui
     /// <summary>
     /// Interaction logic for DealerWindow.xaml
     /// </summary>
-    public partial class DealerWindow : MetroWindow
+    public partial class DealerWindow : MetroWindow //виклик основного вікна програми
     {
         public int id;
         UserUI UserUI = null;
@@ -37,7 +37,7 @@ namespace courseworkui
             usertextblock.Text = "Login: " + userUI.Login + "\nPassword: " + userUI.Password + "\nBalance: " + userUI.Balance;
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void Window_Loaded(object sender, RoutedEventArgs e) //відкриття початкової сторінки на якій відображаються данні по авто
         {
             datagridcar.ItemsSource = null;
             datagridcar.ItemsSource = Methods.GetCars();

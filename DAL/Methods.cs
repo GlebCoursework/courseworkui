@@ -11,7 +11,7 @@ namespace DAL
 {    
     public class Methods
     {
-        MethodsClient _WCF = new MethodsClient();
+        MethodsClient _WCF = new MethodsClient(); //створюємо екземпляр WCF
         
         public List<CarUI> GetCars()
         {

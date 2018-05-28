@@ -21,7 +21,7 @@ namespace courseworkui
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window //початкове вікно з логуванням
     {
         Methods Methods = new Methods();
         public MainWindow()
@@ -29,7 +29,7 @@ namespace courseworkui
             InitializeComponent();
         }
 
-        private async void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e) //кнопка входу
         {
             string login = textbox1.Text;
             string password = passwordbox1.Password;
@@ -51,11 +51,11 @@ namespace courseworkui
 
         }
 
-        private void Register(object sender, RoutedEventArgs e)
+        private void Register(object sender, RoutedEventArgs e) //кнопка на реєстрацію нового користувача
         {
             this.Visibility = Visibility.Hidden;
-            RegisterWindow registerWindow = new RegisterWindow();
-            registerWindow.ShowDialog();
+            RegisterWindow registerWindow = new RegisterWindow(); //створюється екземпляр вікна реєстрації
+            registerWindow.ShowDialog(); //відкриття вікна реєстрації
             this.Visibility = Visibility.Visible;
         }
     }
